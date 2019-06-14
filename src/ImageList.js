@@ -52,33 +52,6 @@
 // }
 
 
-
-// 
-
-// 
-// window.onload = () => {
-//   let width_16 = Math.floor(window.innerWidth / 4);//画像を画面に4列並べるために、画面幅取得後4で割る。小数点以下は切り捨て
-//   let height_9 = Math.floor(width_16 * 0.5625);//16：9サイズになるように、上記の幅から高さを計算
-
-//   // https://picsum.photos/list から、jsonファイルを扱う
-//   let xhr;
-//   xhr = new XMLHttpRequest();
-//   xhr.open("GET", "https://picsum.photos/v2/list", false);
-//   xhr.send(null);
-
-//   let targetElm = document.getElementById('target');//画像を出力する領域
-//   let data = xhr.responseText;
-//   let jsondata = JSON.parse(data);//オブジェクトとして扱う
-
-//   // ダミー画像を表示させるfunction
-//   function ImageList(data) {
-//     //imgタグを作成
-//     let imgtag = document.createElement('img');
-//     //jsondataからidを取得。tada.jsで使用する為、"data-src"属性に画像urlをセットする
-//     imgtag.setAttribute('data-src','https://picsum.photos/' + width_16 + '/' + height_9 + '?image=' + data.id);
-//     //img要素を追加していく
-//     targetElm.appendChild(imgtag);
-//   }
 // }
 
 import React, { Component } from 'react';
