@@ -13,10 +13,9 @@ class ImageList extends Component {
     axios.get('https://picsum.photos/v2/list')
          .then(res => {
             var url = res.data.map(data => (data.download_url))
-            console.log(url)
-            console.log(res.data)
-            this.setState({ items: url})
-         });
+            this.setState({items: url})
+         })
+         .catch(error => console.log(error))
   }
   
   render() {
