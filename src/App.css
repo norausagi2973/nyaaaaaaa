@@ -7,37 +7,29 @@
   margin-top: 50px;
 }
 
-.Image-list {
-  height: 150px;
-  margin-right: 15px;
-  margin-left: 15px;
-}
-
-.example {
-  display: inline-block;
-  padding: 50px;
-}
-
 .Button {
   text-align: left;
-  margin-top: 50px;
+  margin-bottom: 20px;
   margin-left: 50px;
+  margin-top: 20px ;
 }
- 
-.App-header {
-  background-color: #ffffff;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.horizontal_scroll_wrap{
+    background: #f1f1f1;
+    height: 240px;
+    overflow-y: hidden;
 }
-/* 
-.App-link {
-  color: #61dafb;
-} */
+.scroll_lst {
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding-bottom: 50px;
+    margin: 25px 0 0;
+    -webkit-overflow-scrolling: touch;
+}
+.scroll_item {
+    margin-right: 30px;
+    display: inline-block;
+}
 
 @keyframes App-logo-spin {
   from {

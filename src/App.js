@@ -8,7 +8,11 @@ function App() {
   return (
     <div className="App">
       <CreateButton />
-      <ImageList />
+      <div class="horizontal_scroll_wrap">
+        <ul class="scroll_lst">
+          <ImageList />
+        </ul>
+      </div>
       <Preview />
     </div>
   )

@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from './image/1.png'
+import Konva from 'konva'
 
 function Preview() {
   

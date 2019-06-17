@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
+
 class ImageList extends Component {
   constructor(){
     super();
@@ -20,7 +21,11 @@ class ImageList extends Component {
   
   render() {
     return (
-      this.state.items.map(url => <img src= {url} width="300" height="200"/>)
+      this.state.items.map((url) => 
+        <li class="scroll_item">
+              <img src= {url}  width="300" height="200"/>
+        </li>
+      )
     )
   }
 }
