@@ -17,14 +17,14 @@ class ImageList extends Component {
     this.props.previewurl(url)
   }
 
-  componentWillMount() {
-    axios.get('https://picsum.photos/v2/list')
-         .then(res => {
-            var url = res.data.map(data => (data.download_url))
-            this.setState({items: url})
-         })
-         .catch(error => console.log(error))
-  }
+  // componentWillMount() {
+  //   axios.get('https://picsum.photos/v2/list')
+  //        .then(res => {
+  //           var url = res.data.map(data => (data.download_url))
+  //           this.setState({items: url})
+  //        })
+  //        .catch(error => console.log(error))
+  // }
   
   render() {
       // if(this.props.imagelisturl == 0){
