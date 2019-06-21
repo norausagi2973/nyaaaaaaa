@@ -18,4 +18,26 @@ function App() {
   )
 }
 
+// handleButtonClick() {
+//   this.render();
+// }
+
+// export default class MyComponent extends React.Component {
+
+//   handleButtonClick() {
+//     this.render();
+//   }
+
+//   render() {
+//     return (
+//       <div>
+//         {Math.random()}
+//         <button onClick={this.handleButtonClick.bind(this)}>
+//           Click me
+//         </button>
+//       </div>
+//     )
+//   }
+// }
+
 export default App

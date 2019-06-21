@@ -15,7 +15,6 @@
 }
 
 .horizontal_scroll_wrap{
-    background: #f1f1f1;
     height: 240px;
     overflow-y: hidden;
 }
@@ -23,7 +22,7 @@
     overflow-y: hidden;
     white-space: nowrap;
     padding-bottom: 50px;
-    margin: 25px 0 0;
+    margin: 20px 0 0;
     -webkit-overflow-scrolling: touch;
 }
 .scroll_item {
