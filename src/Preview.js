@@ -1,13 +1,58 @@
-import React from 'react'
-import logo from './image/1.png'
+import React, { Component } from 'react'
+import Konva from 'konva'
 
-function Preview() {
+class Preview extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {}
+    this.componentDidUpdate = this.componentDidUpdate.bind(this)
+  }
+
+  componentDidUpdate(){
+    const stage = new Konva.Stage({
+      container: 'container',
+      width: 500,
+      height: 320
+    })
+
+    const layer = new Konva.Layer()
   
-  return (
-    <div>
-      <img src={logo} className="Preview"/> 
-    </div>
-  );
+    const imageObj = new Image()
+    imageObj.onload = function() {
+      const Image = new Konva.Image({
+        x: 0,
+        y: 0,
+        image: imageObj,
+        width: 500,
+        height: 320
+      })
+      layer.add(Image)
+      Image.moveToBottom()
+      layer.batchDraw()
+    }
+    imageObj.src = this.props.previewurl
+    
+    const Text = new Konva.Text({
+      x: stage.width() / 2,
+      y: stage.height() / 2,
+      text: 'LGTM',
+      fontSize: 40,
+      fontFamily: 'Calibri',
+      fill: 'white'
+    })
+    Text.offsetX(Text.width() / 2);
+    Text.offsetY(Text.height() / 2);
+
+    layer.add(Text)
+    stage.add(layer)
+  }
+
+  
+  render() {
+    return (
+        <div  id ='container' align="center"></div>
+    )
+  }
 }
 
 export default Preview
