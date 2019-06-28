@@ -5,28 +5,33 @@ import ImageList from './ImageList'
 import Preview from './Preview'
 
 class App extends Component {
+  // 1
   constructor(){
     super();
     this.state = {
       items: [],
       previewurl: null
     }
+    // 復習ポイント
     this.imagelisturl = this.imagelisturl.bind(this)
     this.previewurl = this.previewurl.bind(this)
   }
 
-  imagelisturl(url){
-    this.setState({items: url})
+  // 2 CreateButtonのボタンがクリックされた時
+  imagelisturl(urls){
+    this.setState({items: urls})
   }
 
+  // 4 ImageListの画像がクリックされた時
   previewurl(url){
     this.setState({previewurl: url})
   }
 
+  // 3
   render() {
     return (
       <div className="App">
-        <CreateButton parentMethod={this.imagelisturl}/>
+        <CreateButton urls={this.imagelisturl}/>
         <div class="horizontal_scroll_wrap">
           <ul class="scroll_lst">
             <ImageList imagelisturl={this.state.items} previewurl={this.previewurl}/>

@@ -2,12 +2,13 @@ import React, { Component } from 'react'
 import Konva from 'konva'
 
 class Preview extends Component {
+  // 1
   constructor(props) {
     super(props)
-    this.state = {}
     this.componentDidUpdate = this.componentDidUpdate.bind(this)
   }
-
+  
+  // 3 コンポーネントが更新された時
   componentDidUpdate(){
     const stage = new Konva.Stage({
       container: 'container',
@@ -47,7 +48,7 @@ class Preview extends Component {
     stage.add(layer)
   }
 
-  
+  // 2
   render() {
     return (
         <div  id ='container' align="center"></div>
