@@ -4,8 +4,6 @@ import CreateButton from './CreateButton'
 import ImageList from './ImageList'
 import Preview from './Preview'
 
-
-
 class App extends Component {
   constructor(){
     super();
@@ -18,19 +16,14 @@ class App extends Component {
   }
 
   imagelisturl(url){
-    console.log(url)
     this.setState({items: url})
   }
 
   previewurl(url){
-    console.log(url)
     this.setState({previewurl: url})
-    console.log(this.state.previewurl)
   }
 
   render() {
-    console.log(this.state.items)
-    console.log(this.state.previewurl)
     return (
       <div className="App">
         <CreateButton parentMethod={this.imagelisturl}/>

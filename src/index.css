@@ -1,0 +1,24 @@
+.Button {
+  text-align: left;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  margin-top: 20px ;
+}
+
+.horizontal_scroll_wrap{
+    height: 240px;
+    overflow-y: hidden;
+    margin-bottom: 40px;
+}
+.scroll_lst {
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding-bottom: 50px;
+    margin: 20px 0 0;
+    -webkit-overflow-scrolling: touch;
+}
+.scroll_item {
+    cursor:pointer;
+    margin-right: 30px;
+    display: inline-block;
+}

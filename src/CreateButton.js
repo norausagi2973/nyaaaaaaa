@@ -10,17 +10,18 @@ class CreateButton extends Component {
   }
 
   componentWillMount() {
-    var num = Math.floor( Math.random() * 33 ) + 1
-    axios.get('https://picsum.photos/v2/list?page='+ num)
+    // const num = Math.floor( Math.random() * 33 ) + 1
+    axios.get('https://picsum.photos/v2/list')
     .then(res => {
-       var url = res.data.map(data => (data.download_url))
-       console.log(this.state.items)
+       const url = res.data.map(data => (data.download_url))
+       
+       const shuffle = require('shuffle-array')
+       shuffle(url)
        this.props.parentMethod(url)
     })
     .catch(error => console.log(error))
   }
   
-
   render() {
     return (
       <div className="Button">

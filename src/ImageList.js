@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import axios from 'axios'
 
 class ImageList extends Component {
   constructor(){
-    super();
+    super()
     this.state = {
       items: [],
     };
@@ -12,7 +11,7 @@ class ImageList extends Component {
   
 
   onClick(e) {
-    var url = e.currentTarget.getAttribute('data-url')
+    const url = e.currentTarget.getAttribute('data-url')
     this.props.previewurl(url)
   }
   
