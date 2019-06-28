@@ -45,6 +45,4 @@ class App extends Component {
   }
 }
 
-// CreateButtonからImageListにデータを送る
-
 export default App
