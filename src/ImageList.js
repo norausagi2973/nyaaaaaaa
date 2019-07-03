@@ -17,7 +17,7 @@ class ImageList extends Component {
   render() {
       return (
         //map→新しい配列を作る　each→繰り返すだけ
-        this.props.imagelisturl.map((url) => 
+        this.props.imageurllist.map((url) => 
         <li key={url} class="scroll_item">
           <img src={url}  onClick={this.setImageList} data-url={url} width="300" height="200"/>
         </li>

@@ -12,13 +12,13 @@ class App extends Component {
       items: [],
       previewurl: null
     }
-    // 復習ポイント
-    this.imagelisturl = this.imagelisturl.bind(this)
+    // bindメソッドを使って他の関数との結びつけが可能　https://www.sejuku.net/blog/49161
+    this.imageurllist = this.imageurllist.bind(this)
     this.previewurl = this.previewurl.bind(this)
   }
 
   // 2 CreateButtonのボタンがクリックされた時
-  imagelisturl(urls){
+  imageurllist(urls){
     this.setState({items: urls})
   }
 
@@ -31,10 +31,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <CreateButton urls={this.imagelisturl}/>
+        <CreateButton urls={this.imageurllist}/>
         <div class="horizontal_scroll_wrap">
           <ul class="scroll_lst">
-            <ImageList imagelisturl={this.state.items} previewurl={this.previewurl}/>
+            <ImageList imageurllist={this.state.items} previewurl={this.previewurl}/>
           </ul>
         </div>
         <Preview previewurl={this.state.previewurl}/>
