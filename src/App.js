@@ -13,6 +13,7 @@ class App extends Component {
       previewurl: null
     }
     // bindメソッドを使って他の関数との結びつけが可能　https://www.sejuku.net/blog/49161
+    // https://jsprimer.net/basic/function-this/
     this.imageurllist = this.imageurllist.bind(this)
     this.previewurl = this.previewurl.bind(this)
   }

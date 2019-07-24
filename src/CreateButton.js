@@ -13,7 +13,7 @@ class CreateButton extends Component {
   // 2 画面が表示される前に実行
   // reactのライフサイクルを壊すので、componentWillMountは最初だけ→reloadImagesで繰り返し
   componentWillMount() {
-    // ('URL')にHTTP GETリクエスト　
+    // ('URL')にHTTP GETリクエスト
     axios.get('https://picsum.photos/v2/list')
     .then(res => {
        const urls = res.data.map(data => (data.download_url))
